@@ -60,3 +60,12 @@ console.log(numeros.reverse());
 // Método trim
 const nome = "   Wallace 65  ";
 console.log(nome.trim());
+
+// Método split
+const nome2 = "Wallace, Maria, Luiz, Eduardo";
+const nomes = nome2.split(", ");
+console.log(nomes);
+
+// Método join
+const nome3 = nomes.join(", ");
+console.log(nome3);
