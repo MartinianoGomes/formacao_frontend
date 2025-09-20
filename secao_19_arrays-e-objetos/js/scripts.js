@@ -31,3 +31,18 @@ console.log(pessoasComNomeGrande2);
 pessoasComNomeGrande2.forEach(obj => {
     console.log(obj.nome);
 });
+
+
+// Percorre o array e retorna o índice e o valor
+const posts = [
+    { id: 1, title: "Primeiro Post", category: "JavaScript" },
+    { id: 2, title: "Segundo Post", category: "JavaScript" },
+    { id: 3, title: "Terceiro Post", category: "JavaScript" },
+    { id: 4, title: "Quarto Post", category: "JavaScript" },
+    { id: 5, title: "Quinto Post", category: "JavaScript" },
+    { id: 6, title: "Sexto Post", category: "JavaScript" },
+]
+
+posts.forEach((post, index) => {
+    console.log(`${index + 1}. ${post.title}. Categoria: ${post.category}`);
+})
