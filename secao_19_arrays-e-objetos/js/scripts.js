@@ -1,4 +1,4 @@
-// Array Filter
+// Array de objetos
 const pessoas = [
     { nome: "Luiz", idade: 62 },
     { nome: "Maria", idade: 23 },
@@ -8,6 +8,7 @@ const pessoas = [
     { nome: "Wallace", idade: 47 },
 ]
 
+// Método filter retorna um novo array com os elementos que passaram no teste
 const pessoasComNomeGrande = pessoas.filter(obj => obj.nome.length >= 5);
 console.log(pessoasComNomeGrande);
 
@@ -51,3 +52,11 @@ posts.forEach((post, index) => {
 if (posts.includes({ id: 1, title: "Primeiro Post", category: "JavaScript" })) {
     console.log("Existe");
 }
+
+// Método reverse
+const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log(numeros.reverse());
+
+// Método trim
+const nome = "   Wallace 65  ";
+console.log(nome.trim());
