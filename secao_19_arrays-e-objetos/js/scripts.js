@@ -46,3 +46,8 @@ const posts = [
 posts.forEach((post, index) => {
     console.log(`${index + 1}. ${post.title}. Categoria: ${post.category}`);
 })
+
+// Método includes verifica se o valor existe no array
+if (posts.includes({ id: 1, title: "Primeiro Post", category: "JavaScript" })) {
+    console.log("Existe");
+}
