@@ -53,19 +53,53 @@ if (posts.includes({ id: 1, title: "Primeiro Post", category: "JavaScript" })) {
     console.log("Existe");
 }
 
-// Método reverse
+// Método reverse - inverte a ordem dos elementos do array
 const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 console.log(numeros.reverse());
 
-// Método trim
+// Método trim - remove os espaços em branco do início e do fim da string
 const nome = "   Wallace 65  ";
 console.log(nome.trim());
 
-// Método split
+// Método split -  divide a string em um array
 const nome2 = "Wallace, Maria, Luiz, Eduardo";
 const nomes = nome2.split(", ");
 console.log(nomes);
 
-// Método join
+// Método join - junta os elementos do array em uma string
 const nome3 = nomes.join(", ");
 console.log(nome3);
+
+// Rest operator - junta os elementos do array em uma string
+const turmaA = ["Wallace", "Maria", "Luiz"];
+const turmaB = ["Eduardo", "Letícia", "Rosana", "Wallace"];
+
+const turmaUnida = [...turmaA, ...turmaB];
+console.log(turmaUnida);
+
+// Outro exemplo de rest operator
+const somaInfinita = (...numeros) => {
+    let total = 0;
+
+    for (let i = 0; i < numeros.length; i++) {
+        total += numeros[i];
+    }
+
+    return total;
+}
+
+console.log(somaInfinita(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+
+
+// For of - percorre os elementos do array
+const somaInfinita2 = (...args) => {
+    let total = 0;
+
+    for (num of args) {
+        total += num;
+    }
+
+    return total;
+}
+
+console.log(somaInfinita2(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
