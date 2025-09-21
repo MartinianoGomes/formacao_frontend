@@ -40,3 +40,13 @@ export class Conta {
         return 'Você está logado!'
     }
 }
+
+let bd = [];
+
+export function cadastrar(email, senha) {
+    let conta = new Conta(email, senha);
+
+    bd.push(conta);
+
+    console.log(bd);
+}
