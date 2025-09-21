@@ -50,3 +50,12 @@ export function cadastrar(email, senha) {
 
     console.log(bd);
 }
+
+
+// Herança - extends
+export class ContaPoupanca extends Conta {
+    constructor(email, senha, saldo) {
+        super(email, senha);
+        this._saldo = saldo;
+    }
+}
