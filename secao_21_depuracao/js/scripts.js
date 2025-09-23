@@ -41,3 +41,10 @@ function checkNumber(number) {
 checkNumber('a');
 checkNumber(10);
 checkNumber('20');
+
+// Exceptions - Exceções
+let x = 10;
+
+if (x > 5) {
+    throw new Error('O valor de x não pode ser maior que 5');
+}
