@@ -130,4 +130,4 @@ function checkArray(arr) {
 
 // checkArray([]);
 
-checkArray([1, 2, 3])
+checkArray([1, 2, 3]);
