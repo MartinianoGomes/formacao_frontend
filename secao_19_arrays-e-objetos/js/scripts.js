@@ -117,3 +117,17 @@ try {
 } finally {
     console.log("O programa foi executado!")
 }
+
+
+// Assertion - Tratamento de valores passados pelo usuário geram erro. Este recurso ajuda no ambiente de desenvolvimento do programa, ou seja, não há contato desta funcionalidade com os usuários do programa.
+function checkArray(arr) {
+    if (arr.length === 0) {
+        throw new Error("O array precisa ter elementos.");
+    } else {
+        console.log(`O array tem ${arr.length} elementos.`)
+    }
+}
+
+// checkArray([]);
+
+checkArray([1, 2, 3])
