@@ -114,4 +114,6 @@ try {
     }
 } catch {
     console.log(`Opa, aconteceu um problema: ${error}`);
+} finally {
+    console.log("O programa foi executado!")
 }
