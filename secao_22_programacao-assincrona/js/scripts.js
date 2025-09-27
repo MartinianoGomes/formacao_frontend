@@ -1,3 +1,4 @@
+// Função setTimeout
 console.log("Programa ainda não ecexutou.");
 
 setTimeout(() => {
