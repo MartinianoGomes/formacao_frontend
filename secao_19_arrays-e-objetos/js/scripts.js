@@ -131,3 +131,7 @@ function checkArray(arr) {
 // checkArray([]);
 
 checkArray([1, 2, 3]);
+
+let array2 = [1, 5, 3, 5]
+
+checkArray(array2)
