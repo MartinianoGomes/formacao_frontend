@@ -36,11 +36,34 @@
 //     })
 
 // Tratamento de erros nas Promises
+// O método resolve do objeto Promise resolve instruções. Você pode receber e tratar o resultado destas instruções
+// com o método then. Encadeando o método cath logo após o then, você pode tratar algum erro que venha ocorrer com o
+// método then. Lembre-se de disparar um Error para que o método catch consiga interceptar o erro.
+// Promise.resolve(4 * 'asd')
+//     .then((n) => {
+//         if (Number.isNaN(n)) {
+//             throw new Error("Valores inválidos!");
+//         }
+//     })
+//     .catch((err) => console.log(`Um erro ocorreu: ${err}`))
 
-Promise.resolve(4 * 'asd')
-    .then((n) => {
-        if (Number.isNaN(n)) {
-            throw new Error("Valores inválidos!");
+
+
+
+// Reject nas promises
+
+function checkNumber(n) {
+    return new Promise((resolve, reject) => {
+        if (n > 10) {
+            resolve(`O número é maior que 10.`);
+        } else {
+            reject(new Error(`Número muito baixo.`));
         }
     })
-    .catch((err) => console.log(`Um erro ocorreu: ${err}`))
+}
+
+let a = checkNumber(20);
+let b = checkNumber(10);
+
+a.then((v) => console.log(`O resultado é ${v}`)).catch((err) => { console.log(`Um erro ocorreu: ${err}`) });
+b.then((v) => console.log(`O resultado é ${v}`)).catch((err) => { console.log(`Um erro ocorreu: ${err}`) });
