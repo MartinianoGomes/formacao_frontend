@@ -51,7 +51,9 @@
 
 
 // Reject nas promises
-
+// O conseito de reject em promises nos ajuda a controlar a saída do tratamento de erros em promises.
+// Caso a promise consiga ser resolvida, bem. Caso não consiga ser resolvida, a promise é estancada e encerrada
+// com o método reject.
 function checkNumber(n) {
     return new Promise((resolve, reject) => {
         if (n > 10) {
