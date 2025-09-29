@@ -21,16 +21,26 @@
 
 
 // Promises
-let somatorioAssincrono = Promise.resolve(() => { 5 + 5 });
+// let somatorioAssincrono = Promise.resolve(() => { 5 + 5 });
 
-somatorioAssincrono
-    .then((value) => {
-        console.log(`A soma é ${value}`);
-        return value;
+// somatorioAssincrono
+//     .then((value) => {
+//         console.log(`A soma é ${value}`);
+//         return value;
+//     })
+//     .then((value) => {
+//         value - 1;
+//     })
+//     .then((value) => {
+//         console.log(`Agora é ${value}`);
+//     })
+
+// Tratamento de erros nas Promises
+
+Promise.resolve(4 * 'asd')
+    .then((n) => {
+        if (Number.isNaN(n)) {
+            throw new Error("Valores inválidos!");
+        }
     })
-    .then((value) => {
-        value - 1;
-    })
-    .then((value) => {
-        console.log(`Agora é ${value}`);
-    })
+    .catch((err) => console.log(`Um erro ocorreu: ${err}`))
