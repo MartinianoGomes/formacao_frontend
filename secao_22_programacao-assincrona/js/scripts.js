@@ -67,5 +67,8 @@ function checkNumber(n) {
     })
 }
 
+let a = checkNumber(20);
+let b = checkNumber(10);
+
 a.then((v) => console.log(`O resultado é ${v}`)).catch((err) => { console.log(`Um erro ocorreu: ${err}`) });
 b.then((v) => console.log(`O resultado é ${v}`)).catch((err) => { console.log(`Um erro ocorreu: ${err}`) });
